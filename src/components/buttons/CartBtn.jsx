@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const CartBtn = () => {
-    const state = useSelector((state) => state.addItem);
+    const state = useSelector((state) => state.handleCart);
     return (
         <Link to='/cart' className='btn btn-outline-primary ms-2'>
             <span className='fa fa-shopping-cart me-1'></span> Cart (
