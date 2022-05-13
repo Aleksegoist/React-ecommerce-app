@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
     const [data, setData] = useState([]);
@@ -62,25 +63,25 @@ const Products = () => {
                         className='btn btn-outline-dark me-2'
                         onClick={() => filterProduct("men's clothing")}
                     >
-                        Men's Clothing
+                        Men's Clothes
                     </button>
                     <button
                         className='btn btn-outline-dark me-2'
                         onClick={() => filterProduct("women's clothing")}
                     >
-                        Women's Clothing
+                        Women's Clothes
                     </button>
                     <button
                         className='btn btn-outline-dark me-2'
                         onClick={() => filterProduct('jewelery')}
                     >
-                        Jewelery Clothing
+                        Jewelery
                     </button>
                     <button
                         className='btn btn-outline-dark me-2'
                         onClick={() => filterProduct('electronics')}
                     >
-                        Electronic Clothing
+                        Electronic
                     </button>
                 </div>
                 {filter.map((product) => {
@@ -104,12 +105,12 @@ const Products = () => {
                                         <p className='card-text lead fw-bold'>
                                             ${product.price}
                                         </p>
-                                        <a
-                                            href='#'
+                                        <Link
+                                            to={`/products/${product.id}`}
                                             className='btn btn-outline-dark'
                                         >
                                             Buy Now
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
