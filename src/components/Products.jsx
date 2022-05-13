@@ -26,16 +26,51 @@ const Products = () => {
     const Loading = () => {
         return <>Loading....</>;
     };
+
     const ShowProducts = () => {
         return (
             <>
-                <div className='buttons'>
-                    <button className='btn btn-outline-dark'>All</button>
-                    <button className='btn btn-outline-dark'>
+                <div className='buttons d-flex justify-content-center mb-5 pb-5'>
+                    <button className='btn btn-outline-dark me-2'>All</button>
+                    <button className='btn btn-outline-dark me-2'>
                         Men's Clothing
                     </button>
+                    <button className='btn btn-outline-dark me-2'>
+                        Women's Clothing
+                    </button>
+                    <button className='btn btn-outline-dark me-2'>
+                        Jewelery Clothing
+                    </button>
+                    <button className='btn btn-outline-dark me-2'>
+                        Electronic Clothing
+                    </button>
                 </div>
-                ;
+                {filter.map((product) => {
+                    return (
+                        <>
+                            <div className='col-md-3'>
+                                <div className='card h-100 text-center p-4'>
+                                    <img
+                                        src={product.image}
+                                        className='card-img-top'
+                                        alt={product.title}
+                                    />
+                                    <div className='card-body'>
+                                        <h5 className='card-title'>
+                                            {product.title}
+                                        </h5>
+                                        <p className='card-text'>
+                                            ${product.price}
+                                        </p>
+                                        <a href='#' className='btn btn-primary'>
+                                            Go somewhere
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                    );
+                })}
             </>
         );
     };
