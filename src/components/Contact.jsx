@@ -55,12 +55,13 @@ const Contact = () => {
                                     htmlFor='exampleFormControlTextarea1'
                                     className='form-label'
                                 >
-                                    Example textarea
+                                    Text
                                 </label>
                                 <textarea
                                     className='form-control'
                                     id='exampleFormControlTextarea1'
                                     rows='6'
+                                    placeholder='Write there...'
                                 ></textarea>
                             </div>
                             <button type='submit' class='btn btn-outline-dark'>
