@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux';
 
 const Checkout = () => {
     const state = useSelector((state) => state.handleCart);
-    var total = 0;
+    let total = 0;
 
     const itemList = (item) => {
         total = total + item.price;
-        item.return(
+        return (
             <li className='list-group-item d-flex justify-content-between lh-sm'>
                 <div>
                     <h6 className='my-0'>{item.title}</h6>
@@ -32,7 +32,7 @@ const Checkout = () => {
 
                             <li className='list-group-item d-flex justify-content-between'>
                                 <span>Total (USD)</span>
-                                <strong>{total}</strong>
+                                <strong>${total}</strong>
                             </li>
                         </ul>
 
@@ -45,7 +45,7 @@ const Checkout = () => {
                                 />
                                 <button
                                     type='submit'
-                                    className='btn btn-secondary'
+                                    className='btn btn-outline-dark'
                                 >
                                     Redeem
                                 </button>
@@ -137,8 +137,8 @@ const Checkout = () => {
                                         placeholder='you@example.com'
                                     />
                                     <div className='invalid-feedback'>
-                                        Please enter a valid email address
-                                        htmlFor shipping updates.
+                                        Please enter a valid email address for
+                                        shipping updates.
                                     </div>
                                 </div>
 
@@ -192,6 +192,7 @@ const Checkout = () => {
                                         required=''
                                     >
                                         <option value=''>Choose...</option>
+                                        <option>Ukraine</option>
                                         <option>United States</option>
                                     </select>
                                     <div className='invalid-feedback'>
@@ -212,6 +213,7 @@ const Checkout = () => {
                                         required=''
                                     >
                                         <option value=''>Choose...</option>
+                                        <option>Kyiv</option>
                                         <option>California</option>
                                     </select>
                                     <div className='invalid-feedback'>
@@ -404,7 +406,7 @@ const Checkout = () => {
                             <hr className='my-4' />
 
                             <button
-                                className='w-100 btn btn-primary btn-lg'
+                                className='w-100 btn btn-outline-dark btn-lg'
                                 type='submit'
                             >
                                 Continue to checkout
