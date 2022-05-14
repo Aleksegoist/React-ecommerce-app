@@ -1,14 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { delCart } from '../redux/actions/index';
+import { delItem } from '../redux/actions/index';
 
 const Cart = () => {
     const state = useSelector((state) => state.handleCart);
     const dispatch = useDispatch();
 
     const handleClose = (item) => {
-        dispatch(delCart(item));
+        dispatch(delItem(item));
     };
 
     const cartItems = (product) => {
@@ -41,7 +41,24 @@ const Cart = () => {
         );
     };
 
-    return <>{state.length !== 0 && state.map(cartItems)}</>;
+    const emptyCart = () => {
+        return (
+            <div className='px-4 my-5 bg-light rounded-3 py-5'>
+                <div className='container py-4'>
+                    <div className='row'>
+                        <h3>Your Cart is Empty</h3>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    return (
+        <>
+            {state.length === 0 && emptyCart()}
+            {state.length !== 0 && state.map(cartItems)}
+        </>
+    );
 };
 
 export default Cart;
