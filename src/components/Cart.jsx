@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { delItem } from '../redux/actions/index';
 
 const Cart = () => {
@@ -53,10 +54,26 @@ const Cart = () => {
         );
     };
 
+    const button = () => {
+        return (
+            <div className='container'>
+                <div className='row'>
+                    <Link
+                        to='/checkout'
+                        className='btn btn-outline-dark mb-5 w-25 mx-auto'
+                    >
+                        Proceed to checkout
+                    </Link>
+                </div>
+            </div>
+        );
+    };
+
     return (
         <>
             {state.length === 0 && emptyCart()}
             {state.length !== 0 && state.map(cartItems)}
+            {state.length !== 0 && button()}
         </>
     );
 };
