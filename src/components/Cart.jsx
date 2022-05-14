@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { delItem } from '../redux/actions/index';
+import EmptyCart from '../img/emptyCart.png';
 
 const Cart = () => {
     const state = useSelector((state) => state.handleCart);
@@ -47,7 +48,13 @@ const Cart = () => {
             <div className='px-4 my-5 bg-light rounded-3 py-5'>
                 <div className='container py-4'>
                     <div className='row'>
-                        <h3>Your Cart is Empty</h3>
+                        <img
+                            src={EmptyCart}
+                            alt='empty cart'
+                            width='500px'
+                            height='550px'
+                        />
+                        {/* <h3>Your Cart is Empty</h3> */}
                     </div>
                 </div>
             </div>
