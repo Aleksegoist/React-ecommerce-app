@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import Twitter from '../img/twitter.png';
+import { SocialIcon } from 'react-social-icons';
 
 const Footer = () => {
     return (
@@ -15,30 +17,12 @@ const Footer = () => {
                             © 2022 AYDev., All Rights Reserved
                         </span>
                     </div>
-
-                    <ul className='nav col-md-4 justify-content-end list-unstyled d-flex'>
-                        <li className='ms-3'>
-                            <Link className='text-muted' to='#'>
-                                {/* <svg className='bi' width='24' height='24'>
-                                <use xlink:to='#twitter'></use>
-                            </svg> */}
-                            </Link>
-                        </li>
-                        <li className='ms-3'>
-                            <Link className='text-muted' to='#'>
-                                {/* <svg className='bi' width='24' height='24'>
-                                <use xlink:to='#instagram'></use>
-                            </svg> */}
-                            </Link>
-                        </li>
-                        <li className='ms-3'>
-                            <Link className='text-muted' to='#'>
-                                {/* <svg className='bi' width='24' height='24'>
-                                <use xlink:to='#facebook'></use>
-                            </svg> */}
-                            </Link>
-                        </li>
-                    </ul>
+                    <div className='col-md-1 d-flex justify-content-end list-unstyled '>
+                        <SocialIcon url='https://linkedin.com/in/alex-yehorov-01a44716a/' />
+                        <SocialIcon url='https://twitter.com/' />
+                        <SocialIcon url='https://facebook.com/' />
+                        <SocialIcon url='https://instagramm.com/' />
+                    </div>
                 </footer>
             </div>
         </>
