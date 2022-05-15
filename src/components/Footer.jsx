@@ -17,7 +17,7 @@ const Footer = () => {
                             © 2022 AYDev., All Rights Reserved
                         </span>
                     </div>
-                    <div className='col-md-1 d-flex justify-content-end list-unstyled '>
+                    <div className='col-md-1 d-flex me-2 justify-content-end list-unstyled '>
                         <SocialIcon url='https://linkedin.com/in/alex-yehorov-01a44716a/' />
                         <SocialIcon url='https://twitter.com/' />
                         <SocialIcon url='https://facebook.com/' />
