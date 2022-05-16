@@ -1,6 +1,6 @@
 # Fully working App E-COMMERCE Online Clothes shop
 
-## Stack
+### Stack
 ### React JS, Redux, Bootstrap
 
 ### DB - FakeApi for example. Use Fetch API
