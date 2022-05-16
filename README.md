@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Fully working App E-COMMERCE Online Clothes shop
+
+## Stack
+### React JS, Redux, Bootstrap
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
